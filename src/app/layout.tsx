@@ -1,17 +1,42 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { ThemeProvider } from '@/components/shared/theme-provider'
+import Footer from '@/components/layout/footer';
+import Header from '@/components/layout/header';
+import { ThemeProvider } from '@/components/shared/theme-provider';
+import { appConfig } from '@/config';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
 const fontSans = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
-})
+});
 
 export const metadata: Metadata = {
-  title: 'Biprodas Roy',
-  description: 'Software Engieer',
-}
+  title: appConfig.title,
+  description: appConfig.description,
+  keywords: ['Biprodas', 'Roy', 'bipro10', 'Software', 'Engineer', 'Web', 'Developer', 'ERP'],
+  authors: [
+    {
+      name: appConfig.author.name,
+      url: appConfig.author.website,
+    },
+  ],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: appConfig.url,
+    title: appConfig.title,
+    description: appConfig.description,
+    siteName: appConfig.name,
+    images: [],
+  },
+  icons: {
+    icon: '/favicon.jpg',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  metadataBase: new URL(appConfig.url),
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -23,9 +48,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-100 via-slate-100 to-cyan-100 dark:bg-gradient-to-br dark:from-gray-800 dark:to-slate-700" />
+          <div className="relative z-10 flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
