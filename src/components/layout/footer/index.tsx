@@ -1,11 +1,11 @@
-import React from 'react';
-import dayjs from 'dayjs';
-import Link from 'next/link';
-import { appConfig } from '@/config';
+import React from 'react'
+import dayjs from 'dayjs'
+import Link from 'next/link'
+import { appConfig } from '@/config'
 
 const Footer = () => {
   return (
-    <footer className="border-t">
+    <footer>
       <div className="container mx-auto flex items-center justify-between p-3">
         <small>
           <Link href="/">Biprodas Roy</Link>
@@ -19,7 +19,7 @@ const Footer = () => {
         </small>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
