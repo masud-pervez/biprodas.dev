@@ -4,7 +4,7 @@ import { appConfig } from '@/config'
 
 const SideText = () => {
   return (
-    <div className="hidden md:block">
+    <div className="hidden xl:block">
       <div className="gamil-link vertical-rl fixed bottom-14 left-16 flex flex-row gap-5">
         {appConfig.social.map((item, idx) => {
           return (

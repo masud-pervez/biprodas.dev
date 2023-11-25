@@ -47,7 +47,7 @@ const HeroSection = () => {
           </p>
 
           <Link
-            href="/project"
+            href="/projects"
             className="bn32 z-10 rounded-sm text-slate-900 ring-1 hover:text-slate-50 dark:text-slate-100"
           >
             All Projects

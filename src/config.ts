@@ -2,6 +2,7 @@ const url = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
 const apiBaseUrl = process.env.API_URL || 'http://localhost:3900'
 import { FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
 import { AiFillFacebook } from 'react-icons/ai'
+import { LiaHackerrank } from 'react-icons/lia'
 
 export const appConfig = {
   name: 'Biprodas Roy',
@@ -46,8 +47,8 @@ export const appConfig = {
       link: 'https://www.facebook.com/masud.pervez.31337',
     },
     {
-      name: 'Instagram',
-      icon: FiInstagram,
+      name: 'HackerRank',
+      icon: LiaHackerrank,
       link: 'https://www.instagram.com/_masud_pervez_/',
     },
   ],

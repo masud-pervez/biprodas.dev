@@ -51,10 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           <div className="fixed h-screen w-full overflow-auto bg-gradient-to-br from-indigo-100 via-slate-100 to-cyan-100 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800" />
           <div className="cscroll relative z-10 flex min-h-screen flex-col overflow-auto">
-            <Header />
             <main className="flex-grow">{children}</main>
-            <SideText />
-            <Footer />
           </div>
         </ThemeProvider>
       </body>

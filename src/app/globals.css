@@ -74,6 +74,7 @@
     @apply bg-background text-foreground;
   }
 }
+
 /* 
 .about-icon {
   @apply flex items-center gap-3 text-info hover:-translate-y-1 cursor-pointer duration-75 delay-75 transition-all;

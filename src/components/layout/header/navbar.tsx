@@ -41,7 +41,7 @@ const Navbar = ({ currentUser }: { currentUser: CurrentUser }) => {
                 active === key &&
                 'text-rose-400 transition-all delay-75 duration-75 ease-linear dark:text-cyan-400'
               } hidden lg:block`}
-              href={`#${key}`}
+              href={`/${key}`}
             >
               {title}
             </Link>
