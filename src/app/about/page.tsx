@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 import Tracker from '@/components/ui/Tracker'
+import { Button } from '@/components/ui/button'
 import { appConfig } from '@/config'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -74,6 +75,11 @@ const AboutPage = () => {
                   </a>
                 </li>
               </ul>
+            </div>
+            <div>
+              <a href="/" className="bn5">
+                Download CV
+              </a>
             </div>
             <div className="flex gap-4">
               {appConfig.social.map((item, idx) => {
